@@ -31,18 +31,27 @@
             <div class="content mt-3 mb-3">
                 {!! $article->content !!}
             </div>
-
             <div class="links text-right" style="display:flex;justify-content:space-between;">
+                @auth
+                    <div>
+                        <a href="#" class="btn btn-outline-light active"><ion-icon name="heart"></ion-icon></a>
+                        <a href="#" class="btn btn-outline-light"><ion-icon name="heart-dislike"></ion-icon></a>
+                    </div>
+                @endauth
                 <div>
-                    <a href="#" class="btn btn-outline-light active"><ion-icon name="heart"></ion-icon></a>
-                    <a href="#" class="btn btn-outline-light"><ion-icon name="heart-dislike"></ion-icon></a>
-                </div>
-                <div>
-                    <a class="btn btn-info" data-container="body" data-toggle="popover" data-popover-color="default"
-                        data-placement="top" title="Copy Link Article" data-content="The link has been copied successfully"
-                        data-original-title="Popover top">Copy Link</a>
-                    <a href="#" class="btn btn-success">Save Article</a>
-                    <a href="#" class="btn btn-outline-danger">Report</a>
+                    <a class="btn btn-info copy_btn" data-container="body" data-toggle="popover"
+                        data-popover-color="default" data-placement="top" title="Copy Link Article"
+                        data-content="The link has been copied successfully" data-original-title="Popover top">Copy Link</a>
+                    @auth
+                        @if (isset($article->MarkArticles) && !empty($article->MarkArticles->where('id_user', Auth::user()->id)))
+                            <a href="{{ route('unMark', [$article->id_user, $article->id]) }}" class="btn btn-warning">Cancel
+                                from favorite</a>
+                        @else
+                            <a href="{{ route('markUp', [$article->id_user, $article->id]) }}" class="btn btn-success">Save
+                                Article</a>
+                        @endif
+                        <a href="#" class="btn btn-outline-danger">Report</a>
+                    @endauth
                 </div>
             </div>
         </div>
@@ -76,7 +85,7 @@
         <div class="card col-12 p-3 text-left mb-2">
             <h3 class="m-0">comments</h3>
             @auth
-                <form method="POST" action="{{ url('/Read/' . $article->user->id . '/' . $article->id . '/Comment') }}"
+                <form method="POST" action="{{ url('/Read/' . $article->id_user . '/' . $article->id . '/Comment') }}"
                     style="display: flex; flex-direction: row-reverse; align-items: center; gap: 10px;">
                     @csrf
                     <textarea class="form-control text-left" name="comment" placeholder="Write Your Comment"></textarea>
@@ -198,8 +207,8 @@
     <div class="row">
         <h3 class="card col-12 text-left mb-3 p-3">Recommend for you</h3>
         @foreach ($recommend_articles as $article)
-            {{ $article }}
-            {{-- <a href="{{ url('Read/' . $article->user->id . '/' . $article->id) }}" class="col-md-4 col-lg-4 card_art"
+            {{-- {{ $article }} --}}
+            <a href="{{ url('Read/' . $article->id_user . '/' . $article->id) }}" class="col-md-4 col-lg-4 card_art"
                 style="color:inherit;">
                 <div class="card">
                     <img alt="Image" class="img-fluid card-img-top" src="{{ $article->bgArticle }}">
@@ -207,7 +216,7 @@
                         <p class="card-text">{{ $article->title }}</p>
                     </div>
                 </div>
-            </a> --}}
+            </a>
         @endforeach
     </div>
     <!-- row closed -->
@@ -265,5 +274,19 @@
                 `;
             });
         }
+
+        // Copy Link Article
+        $(".copy_btn").on('click', function() {
+            let linkSite = location.href;
+            navigator.clipboard
+                .writeText(linkSite)
+                .then(() => {
+                    console.log("Now You Have a Link..");
+                    alert("You have a link now..");
+                })
+                .catch((error) => {
+                    console.error("Failed to copy:", error);
+                });
+        });
     </script>
 @endsection

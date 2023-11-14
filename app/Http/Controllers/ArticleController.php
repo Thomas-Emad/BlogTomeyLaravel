@@ -7,6 +7,8 @@ use App\Models\Type;
 use App\Models\Types_Articles;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
+
 
 class ArticleController extends Controller
 {
@@ -69,7 +71,17 @@ class ArticleController extends Controller
         $typeIds = $article->types()->pluck('types.id')->toArray();
         $recommend_articles = Article::whereHas('types', function ($query) use ($typeIds) {
             $query->whereIn('types.id', $typeIds); // Get recommend Articles By Type
-        })->select('id', 'bgArticle', 'title')->whereNot('id', $id)->limit(4)->get();
+        })->select('id_user', 'id', 'bgArticle', 'title')->whereNot('id', $id)->limit(4)->get();
+
+        // Watched Article
+        $currentUrl = url()->current();
+        $key = 'viewed_urls';
+        $viewedUrls = Cache::get($key, []);
+        if (!in_array($currentUrl, $viewedUrls)) {
+            $viewedUrls[] = $currentUrl;
+            Cache::put($key, $viewedUrls, 60); // 60 Second
+            $article->increment('watched', 1);
+        }
 
         return view("pages.articles.readArticle", compact("article", 'recommend_articles'));
     }

@@ -36,4 +36,9 @@ class Article extends Model
     {
         return $this->belongsToMany(Type::class, 'types__articles', 'id_article', 'id_type');
     }
+    public function MarkArticles(): BelongsTo
+    {
+        return $this->belongsTo(MarkupArticles::class, 'id', 'id_article');
+    }
+
 }

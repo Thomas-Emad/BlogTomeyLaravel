@@ -11,7 +11,7 @@ class IndexController extends Controller
     public function index()
     {
         $types = Type::get();
-        $articles = Article::orderByDesc('created_at')->paginate(2);
+        $articles = Article::orderByDesc('created_at')->paginate(10);
         $pages_link = $articles->onEachSide(5);
         if ($pages_link->lastPage() < $pages_link->currentPage()) {
             return view('404');

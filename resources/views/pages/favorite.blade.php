@@ -1,32 +1,43 @@
 @extends('layouts.master')
 @section('css')
+    <style>
+        .bookmark {
+            padding: 10px;
+            border-radius: 100px;
+            transition: 0.3s;
+            display: inline-block;
+            color: inherit;
+        }
+
+        .bookmark:hover {
+            background-color: #eee;
+        }
+    </style>
 @endsection
 @section('page-header')
-    <!-- breadcrumb -->
-    <div class="breadcrumb-header justify-content-between card p-3">
-        <div class="row wd-xl-20p"
-            style='height: 60px; flex-direction: row; flex-wrap: nowrap; overflow: hidden; overflow-x: scroll; padding: 10px;'>
-            @foreach ($types as $type)
-                <a href="{{ $type->id }}"
-                    class="btn btn-outline-secondary btn-rounded ml-1 mr-1  @if ($loop->first) active @endif">{{ $type->name }}</a>
-            @endforeach
-        </div>
-    </div>
-    <!-- breadcrumb -->
 @endsection
 @section('content')
     <!-- row -->
+
     <div class="row">
+        <h2 class="card col-12 mt-4 p-3 text-left">Your Favorite</h2>
         @foreach ($articles as $article)
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                 <div class="card custom-card">
                     <img class="card-img-top w-100 w-100" src="{{ $article->bgArticle }}" alt="">
                     <div class="card-body">
-                        <a href="{{ route('read', [$article->id_user, $article->id]) }}">
-                            <h4 class="card-title">{{ $article->title }}</h4>
-                        </a>
+                        <div style="display: flex; justify-content:space-between">
+                            <a href="{{ route('read', [$article->id_user, $article->id]) }}">
+                                <h4 class="card-title">{{ $article->title }}</h4>
+                            </a>
+                            <a href="{{ route('unMark', [Auth::user()->id, $article->id]) }}" class="bookmark"
+                                title="Remove From Favorite">
+                                <i class="far fa-bookmark"></i>
+                            </a>
+                        </div>
                         <p class="card-text mb-0">{{ $article->title }}</p>
                     </div>
+
                 </div>
             </div>
         @endforeach
