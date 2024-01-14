@@ -1,0 +1,31 @@
+<?php
+
+return [
+  'head' => '>Well done!',
+  'article.add' => 'Articles have been added successfully..',
+  'article.edit' => 'Articles have been Editing successfully..',
+  'article.delete' => 'The deletion process was completed successfully',
+  'articles.banned' => 'The status of the article has been successfully changed',
+  'comment.add' => 'Comment Added Successfully..',
+  'comment.edit' => 'This comment has been successfully edited',
+  'comment.delete' => 'This comment has been successfully deleted',
+  'favorites.add' => 'This article has been added to your favorites',
+  'favorites.delete' => 'This article has been deleted from your favorites',
+  'reaction.add' => 'Your reaction has been added successfully',
+  'reaction.delete' => 'Your interaction has been successfully deleted',
+  'reports' => 'This article has been reported and the specialized team will examine it and remove it if necessary..',
+  'roles.create' => 'Role created successfully',
+  'roles.update' => 'Role updated successfully',
+  'roles.delete' => 'Role deleted successfully',
+  'types.add' => 'Added successfully..',
+  'types.edit' => 'Editing successfully..',
+  'types.delete' => 'Deleting successfully..',
+  'user.role' => 'User Roles Update Successfully..',
+  'user.update' => 'Data has been updated successfully..',
+  'user.unfollow' => 'This editor has been successfully unfollowed..',
+  'user.follow' => 'This editor has been followed, from now on to receive all new updates from him..',
+  'user.delete' => 'This account has been successfully deleted',
+  'user.canotdelete' => 'Sorry, you don\'t have permission for this',
+  'user.banned' => 'The status of the User has been successfully changed',
+
+];
