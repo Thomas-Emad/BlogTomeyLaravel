@@ -25,6 +25,9 @@ return [
   'title.404' => 'هل توجد هذا الصفحه لدينا؟..',
   'title.register' => 'انشاء حساب',
   'title.login' => 'تسجيل دخول',
+  'title.email' => 'نسيت كلمه المرور',
+  'title.reset' => 'اعادة كلمه المرور',
+
 
   // Content Pages Index/Home
   'index.message' => "عد لاحقا, لا يوجد اي مقالات لك الان!..",
@@ -215,7 +218,7 @@ return [
 
   // Content Page Statistic Articles
   'statisticArticle.blockArticle' => "تم حظر هذه المقالات لأنها تنتهك معايير المجتمع",
-  'statisticArticle.btn.view' => "مشاهدين",
+  'statisticArticle.btn.view' => "مشاهده",
   'statisticArticle.btn.edit' => "تعديل",
   'statisticArticle.btn.delete' => "حذف",
   'statisticArticle.modal.delete' => "حذف المقاله",
@@ -286,7 +289,6 @@ return [
   'register.login' => "هل لديك حساب بالفعل؟!",
   'register.login.button' => "تسجيل دخول",
 
-
   // Content login
   'login.head.title' => "مرحبا بعودتك!",
   'login.head.message' => "تسجل دخولك حتي تدخل منزلك..",
@@ -297,4 +299,24 @@ return [
   'login.login' => "تسجيل دخول",
   'login.register' => "ليس لديك حساب هنا؟!!",
   'login.register.button' => "أنشاء حساب",
+  'login.forgot' => 'نسيت كلمه المرور؟!',
+
+  // Content Send Mail Password
+  'email.title' => "نسيت كلمه المرور",
+  'email.head' => "ادخل هنا البريدك الالكتروني",
+  'email.input' => "البريد الالكتروني",
+  'email.btn' => "ارسال",
+  'email.close' => "انسي الامر",
+  'email.close.link' => "اعدني للخلف",
+  'email.close.text' => ",  صفحه تسجل الدخول",
+
+  // Content Reset Password
+  'reset.title' => "مرحبا بعوتك!",
+  'reset.head' => "اعادة تعين كلمه مرور",
+  'reset.input.email' => "البريد الالكتروني",
+  'reset.input.password' => "كلمه المرور الجديد",
+  'reset.input.passwordConfirm' => "تاكيد كلمه المرور",
+  'reset.send' => "اعادة تعين كلمه المرور",
+  'reset.login' => "لدي حساب بالفعل",
+  'reset.login.link' => "تسجيل دخول",
 ];

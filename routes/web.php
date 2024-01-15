@@ -39,8 +39,6 @@ Route::get("lang/{locale}", function ($locale) {
   return back();
 });
 
-
-
 Route::controller(IndexController::class)->group(function () {
   Route::get('/', 'index');
   Route::get('/index/{name?}', 'index');

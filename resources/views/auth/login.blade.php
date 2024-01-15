@@ -67,6 +67,9 @@
                                                     type="submit">{{ __('pages.login.login') }}</button>
                                             </form>
                                             <div class="main-signin-footer mt-5">
+                                                <p><a href="{{ route('password.request') }}">{{ __('pages.login.forgot') }}
+                                                    </a>
+                                                </p>
                                                 <p>{{ __('pages.login.register') }} <a
                                                         href="{{ url('/' . ($page = 'register')) }}">{{ __('pages.login.register.button') }}</a>
                                                 </p>

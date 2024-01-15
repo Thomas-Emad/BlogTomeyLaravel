@@ -24,7 +24,8 @@ return [
   'title.404' => '404',
   'title.register' => 'Register',
   'title.login' => 'Login',
-
+  'title.email' => 'Forgot Password',
+  'title.reset' => 'Reset Your Password',
 
   // Content Pages Index/Home
   'index.message' => "Come back soon. There are currently no articles for you",
@@ -294,5 +295,24 @@ return [
   'login.login' => "Login",
   'login.register' => "Don't have an account? ",
   'login.register.button' => "Create an Account",
+  'login.forgot' => "Forgot Password?!",
 
+  // Content Send Mail Password
+  'email.title' => "Forgot Password!",
+  'email.head' => "Please Enter Your Email",
+  'email.input' => "Email",
+  'email.btn' => "Send",
+  'email.close' => "Forget it",
+  'email.close.link' => "Send me back",
+  'email.close.text' => ",  to the sign in screen.",
+
+  // Content Reset Password
+  'reset.title' => "Welcome back!",
+  'reset.head' => "Reset Your Password",
+  'reset.input.email' => "Email",
+  'reset.input.password' => "New Password",
+  'reset.input.passwordConfirm' => "Confirm Password",
+  'reset.send' => "Reset Password",
+  'reset.login' => "Already have an account?",
+  'reset.login.link' => "Login",
 ];
