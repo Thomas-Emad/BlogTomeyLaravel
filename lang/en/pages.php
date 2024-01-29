@@ -34,6 +34,7 @@ return [
   'profile.info' => "Bio",
   'profile.articles' => "Articles",
   'profile.followers' => "Followers",
+  'profile.lastLogin' => "Last Login",
   'profile.watched' => "Watched",
   'profile.reports' => "Your Reports",
   'profile.about' => "About Me",

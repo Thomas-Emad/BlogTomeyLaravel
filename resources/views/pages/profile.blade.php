@@ -50,6 +50,9 @@
                                     @endif
                                 </div>
                             @endif
+                            <div class="text-muted">
+                                {{ __('pages.profile.lastLogin') }}: {{ Auth::user()->last_login }}
+                            </div>
                         </div>
                     </div>
                 </div>

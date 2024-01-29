@@ -49,7 +49,14 @@ class HomeController extends Controller
     $historyTitle = collect(array_merge($userOpen->articles_watched->pluck('title')->take(5)->toArray(), $userOpen->search->pluck('content')->take(5)->toArray()))->shuffle();
     $historyTerms = [];
     foreach ($historyTitle as $title) {
+      $words = explode(' ', $title);
       $historyTerms = array_merge($historyTerms, explode(' ', $title));
+      $badWords = ['is', 'the', 'a', 'his', 'her'];
+      foreach ($badWords as $w) {
+        if (array_search($w, $words)) {
+          unset($words[array_search($w, $words)]);
+        }
+      }
     }
 
     // Get All Articles has This Word Search And watched Articles, And Check if That Does not In View Articles

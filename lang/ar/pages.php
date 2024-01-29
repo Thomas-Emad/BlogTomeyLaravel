@@ -37,6 +37,7 @@ return [
   'profile.articles' => "المقالات",
   'profile.followers' => "المتابعين",
   'profile.watched' => "المشاهدات",
+  'profile.lastLogin' => "اخر تسجيل دخول",
   'profile.reports' => "الإبلاغات عليك",
   'profile.about' => "المعلومات",
   'profile.joinData' => "تاريخ انضمامك لمجتمعنا: ",
