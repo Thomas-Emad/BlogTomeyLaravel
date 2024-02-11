@@ -1,0 +1,13 @@
+#Thank you for purchasing this blog
+
+#A number of technologies have been used on this site, such as:
+- Html, Css, PHP-> Laravel
+- Javascript
+- Bootstrap
+- Dashboard Valex
+
+#installation
+1- Move Your File To Server
+2- Create Your Database
+3- Edit .env Information
+4- Let's Go..

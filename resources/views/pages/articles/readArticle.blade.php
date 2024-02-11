@@ -243,7 +243,9 @@
         <a href="{{ url('Read/' . $article->id_user . '/' . $article->id) }}" class="col-md-4 col-lg-4 card_art"
             style="color:inherit;">
             <div class="card">
-                <img alt="Image" class="img-fluid card-img-top" src="{{ $article->bgArticle }}">
+                <img alt="Responsive image" class="img-fluid"
+                    src="{{ isset($article->bgArticle) ? url('bgArticles/' . $article->bgArticle) : 'http://127.0.0.1:8000/assets/img/photos/1.jpg' }}"
+                    style="margin: 0 auto;width: 100%; height:150px">
                 <div class="card-body ">
                     <p class="card-text">{{ $article->title }}</p>
                 </div>
