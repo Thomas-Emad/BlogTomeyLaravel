@@ -7,10 +7,10 @@
 @section('page-header')
     <!-- breadcrumb -->
     <div class="breadcrumb-header justify-content-between card p-3">
-        <div class="row wd-xl-20p"
+        <div class="row"
             style='white-space: pre;height: 60px; flex-direction: row; flex-wrap: nowrap; overflow: hidden; overflow-x: scroll; padding: 10px; word-wrap: pre;'>
             @foreach ($types as $type)
-                <a href="{{ url('index', $type->name) }}"
+                <a href="{{ url('home', $type->name) }}"
                     class="btn btn-outline-secondary btn-rounded ml-1 mr-1  @if (
                         (!empty(request()->segment(2)) && request()->segment(2) == $type->name) ||
                             (empty(request()->segment(2)) && $loop->first)) active @endif">{{ $type->name }}</a>
