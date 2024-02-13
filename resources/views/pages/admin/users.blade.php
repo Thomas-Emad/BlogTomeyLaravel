@@ -46,8 +46,15 @@
                                 @foreach ($users as $user)
                                     <tr>
                                         <td>
-                                            <img alt="avatar" class="rounded-circle avatar-md mr-2"
-                                                src="{{ URL::asset('assets/img/faces/1.jpg') }}">
+                                            @if (!empty($user->img))
+                                                <img src="{{ asset('files/' . $user->img) }}" alt=""
+                                                    onerror="this.src='{{ URL::asset('assets/img/faces/6.jpg') }}'"
+                                                    style="width:50px;height:50px;border-radius:100px">
+                                            @else
+                                                <div class="avatar bg-info rounded-circle" style="width:50px;height:50px">
+                                                    {{ $user->name[0] }}
+                                                </div>
+                                            @endif
                                         </td>
                                         <td>{{ $user->name }}</td>
                                         <td>

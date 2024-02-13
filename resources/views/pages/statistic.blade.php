@@ -232,7 +232,7 @@
                         @foreach ($user->articles->orderByDesc('created_at')->limit(10)->get() as $article)
                             <div class="d-flex align-items-center item  border-bottom">
                                 <div class="d-flex">
-                                    <img src="{{ url('bgArticles/' . $article->bgArticle) }}" alt="img"
+                                    <img src="{{ asset('bgArticles/' . $article->bgArticle) }}" alt="img"
                                         class="ht-30 wd-30 ml-2">
                                     <div class="">
                                         <h6 class="">{{ \Str::limit($article->title, 15) }}</h6>
@@ -272,11 +272,7 @@
         new Morris.Area({
             element: 'morrisArea1',
             data: [
-                @foreach ($reactionArticlesYear(
-        now()->subYear(5)->format('Y'),
-        $user,
-        '1',
-    ) as $key => $value)
+                @foreach ($reactionArticlesYear(now()->subYear(5)->format('Y'), $user, '1') as $key => $value)
                     {
                         y: {{ $key }} + '-01-01',
                         a: {{ $value[0] }},

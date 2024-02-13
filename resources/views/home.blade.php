@@ -57,7 +57,8 @@
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                 <div class="card custom-card">
                     <img class="card-img-top w-100" style="height: 120px;"
-                        src="{{ url('bgArticles/' . $article->bgArticle) }}" alt="">
+                        src="{{ isset($article->bgArticle) ? asset('bgArticles/' . $article->bgArticle) : asset('assets/img/photos/1.jpg') }}"
+                        alt="">
                     <div class="card-body">
                         <a href="{{ route('read', [$article->id_user, $article->id]) }}">
                             <h4 class="card-title">{{ \Str::limit(strip_tags($article->title, ENT_COMPAT), 20) }}</h4>
@@ -72,7 +73,8 @@
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                     <div class="card custom-card">
                         <img class="card-img-top w-100" style="height: 120px;"
-                            src="{{ url('bgArticles/' . $article->bgArticle) }}" alt="">
+                            src="{{ isset($article->bgArticle) ? asset('bgArticles/' . $article->bgArticle) : asset('assets/img/photos/1.jpg') }}"
+                            alt="">
                         <div class="card-body">
                             <a href="{{ route('read', [$article->id_user, $article->id]) }}">
                                 <h4 class="card-title">{{ \Str::limit(strip_tags($article->title, ENT_COMPAT), 20) }}</h4>

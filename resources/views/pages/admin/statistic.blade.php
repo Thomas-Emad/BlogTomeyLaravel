@@ -182,7 +182,7 @@
                             <a href="{{ route('profile', ['id' => $user->id]) }}" target="__blank"
                                 class="d-flex align-items-center item  border-bottom" style="color:inherit">
                                 <div class="d-flex">
-                                    <img src="{{ url('files/' . $user->img) }}"
+                                    <img src="{{ asset('files/' . $user->img) }}"
                                         onerror="this.src='{{ URL::asset('assets/img/faces/6.jpg') }}'" alt="img"
                                         class="ht-30 wd-30 ml-2">
                                     <div class="">
@@ -223,9 +223,7 @@
         new Morris.Area({
             element: 'morrisArea1',
             data: [
-                @foreach ($reactionArticlesYear(
-        now()->subYear(5)->format('Y'),
-    ) as $key => $value)
+                @foreach ($reactionArticlesYear(now()->subYear(5)->format('Y')) as $key => $value)
                     {
                         y: {{ $key }} + '-01-01',
                         a: {{ $value[0] }},

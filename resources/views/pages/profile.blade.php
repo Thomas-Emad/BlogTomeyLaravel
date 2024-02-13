@@ -171,7 +171,7 @@
                                     @csrf
                                     <div class="main-img-user profile-user" style="width:100px;height:100px">
                                         <label for="file">
-                                            <img alt="" src="{{ url('files/' . $user->img) }}"
+                                            <img alt="" src="{{ asset('files/' . $user->img) }}"
                                                 onerror="this.src='{{ URL::asset('assets/img/faces/6.jpg') }}'"><a
                                                 class="fas fa-camera profile-edit"></a>
                                         </label>

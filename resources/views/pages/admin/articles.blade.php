@@ -63,7 +63,7 @@
                                     <tr>
                                         <td>
                                             <img alt="avatar" class="rounded-circle avatar-md mr-2"
-                                                src="{{ url('bgArticles/' . $article->bgArticle) }}">
+                                                src="{{ asset('bgArticles/' . $article->bgArticle) }}">
                                         </td>
                                         <td>{{ \Str::limit($article->title, 10) }}</td>
                                         <td>{{ $article->user->name }}</td>

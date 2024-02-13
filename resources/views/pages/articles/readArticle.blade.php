@@ -30,7 +30,7 @@
             </div>
         </div>
         <div><img alt="Responsive image" class="img-fluid"
-                src="{{ isset($article->bgArticle) ? url('bgArticles/' . $article->bgArticle) : 'http://127.0.0.1:8000/assets/img/photos/1.jpg' }}"
+                src="{{ isset($article->bgArticle) ? asset('bgArticles/' . $article->bgArticle) : asset('assets/img/photos/1.jpg') }}"
                 style="margin: 0 auto;width: 100%; height:400px">
         </div>
         <div class="content mt-3 mb-3">
@@ -84,7 +84,7 @@
         <div class="info" style="display:flex;gap:20px">
             <a href="{{ route('profile', ['id' => $article->user->id]) }}">
                 @if (!empty($article->user->img))
-                    <img src="{{ url('files/' . $article->user->img) }}" alt=""
+                    <img src="{{ asset('files/' . $article->user->img) }}" alt=""
                         onerror="this.src='{{ URL::asset('assets/img/faces/6.jpg') }}'"
                         style="width:50px;height:50px;border-radius:100px">
                 @else
@@ -244,7 +244,7 @@
             style="color:inherit;">
             <div class="card">
                 <img alt="Responsive image" class="img-fluid"
-                    src="{{ isset($article->bgArticle) ? url('bgArticles/' . $article->bgArticle) : 'http://127.0.0.1:8000/assets/img/photos/1.jpg' }}"
+                    src="{{ isset($article->bgArticle) ? asset('bgArticles/' . $article->bgArticle) : asset('assets/img/photos/1.jpg') }}"
                     style="margin: 0 auto;width: 100%; height:150px">
                 <div class="card-body ">
                     <p class="card-text">{{ $article->title }}</p>

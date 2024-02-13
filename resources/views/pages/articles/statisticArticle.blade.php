@@ -50,7 +50,7 @@
                     @endcan
                 </div>
                 <div class="img" style="background-color: bisque; width:200px;height:200px">
-                    <img src="{{ url('bgArticles/' . $article->bgArticle) }}" class="rounded-5"
+                    <img src="{{ asset('bgArticles/' . $article->bgArticle) }}" class="rounded-5"
                         style="width: 100%; height:100%">
                 </div>
             </div>
@@ -109,8 +109,7 @@
                         </div>
                     </div>
                 @endforeach
-                @if (sizeof(
-                        $article->comments()->orderByDesc('created_at')->limit(10)->get()) == 0)
+                @if (sizeof($article->comments()->orderByDesc('created_at')->limit(10)->get()) == 0)
                     <p class="text-center text-lite btn bg-gray-100  w-100" style="font-weight:bold">
                         {{ __('pages.statisticArticle.comments.message') }}</p>
                 @endif

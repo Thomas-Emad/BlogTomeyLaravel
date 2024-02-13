@@ -30,7 +30,7 @@
                 style="display: flex; flex-direction: row; align-items: center; justify-content: space-between;">
                 <div class="boxCard">
                     @if (!empty($user->img))
-                        <img src="{{ url('files/' . $user->img) }}" alt=""
+                        <img src="{{ asset('files/' . $user->img) }}" alt=""
                             onerror="this.src='{{ URL::asset('assets/img/faces/6.jpg') }}'"
                             style="width:50px;height:50px;border-radius:100px">
                     @else
@@ -62,7 +62,7 @@
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                 <div class="card custom-card">
                     <img class="card-img-top w-100" style="height: 120px;"
-                        src="{{ url('bgArticles/' . $article->bgArticle) }}" alt="">
+                        src="{{ asset('bgArticles/' . $article->bgArticle) }}" alt="">
                     <div class="card-body">
                         <div style="display: flex; justify-content:space-between">
                             <a href="{{ route('read', [$article->id_user, $article->id]) }}" dir="ltr">

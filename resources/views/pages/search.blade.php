@@ -45,7 +45,7 @@
                 @foreach ($articles as $article)
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="card custom-card">
-                            <img class="card-img-top w-100 w-100" src="{{ url('bgArticles/' . $article->bgArticle) }}"
+                            <img class="card-img-top w-100 w-100" src="{{ asset('bgArticles/' . $article->bgArticle) }}"
                                 alt="">
                             <div class="card-body">
                                 <a href="{{ route('read', [$article->id_user, $article->id]) }}">
