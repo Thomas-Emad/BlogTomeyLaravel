@@ -52,7 +52,7 @@
                             name="heart-dislike"></ion-icon>{{ $article->ReactionArticles->where('action', '=', 0)->count() }}</a>
                 </div>
             @endauth
-            <div>
+            <div style=" display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; ">
                 <a class="btn btn-info copy_btn" data-container="body" data-toggle="popover"
                     data-popover-color="default" data-placement="top"
                     title="{{ __('pages.readArticle.btn.link.title') }}"

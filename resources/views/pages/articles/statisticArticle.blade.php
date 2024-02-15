@@ -37,7 +37,7 @@
                     </div>
                     @can('articles-controll')
                         @if ($article->hidden == null)
-                            <div class="actions row mt-1" style="gap: 10px">
+                            <div class="actions row mt-1 w-100" style="gap: 10px">
                                 <a href="{{ route('read', [$article->id_user, $article->id]) }}"
                                     class="btn btn-outline-primary col-12">{{ __('pages.statisticArticle.btn.view') }}</a>
                                 <a href="{{ route('editArticle', [$article->id_user, $article->id]) }}"
