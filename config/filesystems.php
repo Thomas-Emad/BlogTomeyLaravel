@@ -43,13 +43,18 @@ return [
       'visibility' => 'public',
       'throw' => false,
     ],
+
     'bgFiles' => [
       'driver' => 'local',
       'root' => public_path('/files'),
+      'visibility' => 'public',
+      'throw' => false,
     ],
     'bgArticles' => [
       'driver' => 'local',
-      'root' => public_path('/articles'),
+      'root' => public_path('bgArticles'),
+      'visibility' => 'public',
+      'throw' => false,
     ],
 
     's3' => [

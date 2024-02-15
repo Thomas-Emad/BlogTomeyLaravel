@@ -38,11 +38,8 @@
                         action="@isset($article) {{ route('articles.update', $article->id) }} @else {{ route('articles.store') }} @endisset"
                         method="POST" id="formContent" dir="ltr" enctype="multipart/form-data">
                         @csrf
-                        @isset($article)
-                            @method('PATCH')
-                        @else
-                            @method('POST')
-                        @endisset
+                        @method('POST')
+
                         <div class="row mb-2">
                             <div class="col-12">
                                 <label for="inputName" class="form-label">{{ __('pages.writeEdit.title') }}</label>

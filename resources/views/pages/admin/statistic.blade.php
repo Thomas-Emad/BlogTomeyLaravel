@@ -207,6 +207,8 @@
     <!-- Container closed -->
     </div>
     <!-- main-content closed -->
+    <?php
+    $statActions = $reactionArticlesYear(now()->subYear(5)->format('Y')); ?>
 @endsection
 @section('js')
     <!--Internal  Datepicker js -->
@@ -216,30 +218,4 @@
     <!--Internal  Morris js -->
     <script src="{{ URL::asset('assets/plugins/raphael/raphael.min.js') }}"></script>
     <script src="{{ URL::asset('assets/plugins/morris.js/morris.min.js') }}"></script>
-    <!--Internal Chart Morris js -->
-    <script src="{{ URL::asset('assets/js/chart.morris.js') }}"></script>
-    <script>
-        let morrisArea1 = document.getElementById('morrisArea1');
-        new Morris.Area({
-            element: 'morrisArea1',
-            data: [
-                @foreach ($reactionArticlesYear(now()->subYear(5)->format('Y')) as $key => $value)
-                    {
-                        y: {{ $key }} + '-01-01',
-                        a: {{ $value[0] }},
-                        b: {{ $value[1] }}
-                    },
-                @endforeach
-            ],
-            xkey: 'y',
-            ykeys: ['a', 'b'],
-            labels: ['Like', 'DisLike'],
-            lineColors: ['#6d6ef3', '#f7557a'],
-            lineWidth: 1,
-            fillOpacity: 0.9,
-            gridTextSize: 11,
-            hideHover: 'auto',
-            resize: true
-        });
-    </script>
 @endsection

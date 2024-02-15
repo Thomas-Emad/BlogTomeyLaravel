@@ -22,6 +22,7 @@
     <!-- main-content -->
     <div class="main-content app-content">
         @include('layouts.main-header')
+        @include('layouts.cookies')
         <!-- container -->
         <div class="container-fluid">
             @yield('page-header')
@@ -46,6 +47,7 @@
             @include('layouts.sidebar')
             @include('layouts.footer')
             @include('layouts.footer-scripts')
+
 </body>
 
 </html>

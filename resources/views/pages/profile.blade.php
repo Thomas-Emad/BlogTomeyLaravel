@@ -35,7 +35,7 @@
                                     <h6 class="text-small text-muted mb-0">{{ __('pages.profile.articles') }}</h6>
                                 </div>
                             </div>
-                            @if (Auth::user()->id !== $user->id)
+                            @if (Auth::check() && Auth::user()->id !== $user->id)
                                 <div class="actions">
                                     @if (\Auth::user()->follow->where('id_author', $user->id)->first())
                                         <a href="{{ route('follow', ['id' => $user->id]) }}"
@@ -51,7 +51,7 @@
                                 </div>
                             @endif
                             <div class="text-muted">
-                                {{ __('pages.profile.lastLogin') }}: {{ Auth::user()->last_login }}
+                                {{ __('pages.profile.lastLogin') }}: {{ $user->last_login }}
                             </div>
                         </div>
                     </div>
@@ -75,7 +75,7 @@
                         </div>
                     </div>
                 </div>
-                @if (Auth::user()->id == $user->id)
+                @if (Auth::check() && Auth::user()->id == $user->id)
                     <div class="col-sm-12 col-xl-4 col-lg-12 col-md-12">
                         <div class="card ">
                             <div class="card-body">
@@ -118,7 +118,7 @@
                                             class="las la-user-circle tx-16 mr-1"></i></span> <span
                                         class="hidden-xs">{{ __('pages.profile.about') }}</span> </a>
                             </li>
-                            @if (Auth::user()->id == $user->id)
+                            @if (Auth::check() && Auth::user()->id == $user->id)
                                 <li class="">
                                     <a href="#settings" data-toggle="tab" aria-expanded="false"> <span class="visible-xs"><i
                                                 class="las la-cog tx-16 mr-1"></i></span> <span
@@ -165,7 +165,7 @@
                                     {{ $user->created_at }}</p>
                             </div>
                         </div>
-                        @if (Auth::user()->id == $user->id)
+                        @if (Auth::check() && Auth::user()->id == $user->id)
                             <div class="tab-pane" id="settings">
                                 <form action="{{ route('userUpdate') }}" method="POST" enctype="multipart/form-data">
                                     @csrf

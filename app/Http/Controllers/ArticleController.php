@@ -69,7 +69,13 @@ class ArticleController extends Controller
 
     // Move BgArticle
     $imageName = Auth::user()->id . time() . '.' . $request->bgArticle->extension();
-    $request->bgArticle->move(public_path('bgArticles'), $imageName);
+    if ($request->hasFile("bgArticle")) {
+      $imageName = Storage::disk('bgArticles')->putFileAs(
+        '/',
+        $request->file("bgArticle"),
+        $imageName
+      );
+    }
 
     // Add Article
     Article::create([

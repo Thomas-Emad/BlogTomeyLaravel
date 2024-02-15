@@ -46,12 +46,14 @@ Route::controller(IndexController::class)->group(function () {
 
 Route::get('/home/{typeArticles?}', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('/admin/types', TypeController::class)->middleware(['auth', 'permission:types']);
-Route::resource('/articles', ArticleController::class);
-Route::get('/articles/{id?}', [ArticleController::class, 'index']);
+// Route::resource('/articles', ArticleController::class);
 Route::controller(ArticleController::class)->group(function () {
+  Route::get('/articles/{id?}', 'index')->name("articles.index");
   Route::get('/article/write', 'create')->middleware(['auth', 'verified']);
+  Route::post('/article/write/store', 'store')->name("articles.store");
   Route::get('/Read/{user}/{id}', 'show')->name('read');
   Route::get('/edit/{user}/{id}', 'edit')->name('editArticle')->middleware(['auth', 'verified']);
+  Route::post('/edit/{id}/update', 'update')->name("articles.update");
   Route::post('/article/delete', 'destroy')->name('delArticle')->middleware(['auth', 'verified']);
   Route::get('/article/statistic/{user}/{id}', 'static')->name('statisticArticle')->middleware(['auth', 'verified']);
 });

@@ -30,7 +30,7 @@
             </div>
         </div>
         <div><img alt="Responsive image" class="img-fluid"
-                src="{{ isset($article->bgArticle) ? asset('bgArticles/' . $article->bgArticle) : asset('assets/img/photos/1.jpg') }}"
+                src="{{ isset($article->bgArticle) ? asset('/bgArticles/' . $article->bgArticle) : asset('assets/img/photos/1.jpg') }}"
                 style="margin: 0 auto;width: 100%; height:400px">
         </div>
         <div class="content mt-3 mb-3">

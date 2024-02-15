@@ -37,9 +37,8 @@ class TypeController extends Controller
    */
   public function store(Request $request)
   {
-    return $request;
     $request->validate([
-      'name' => ['required', 'min:3', "max:100", "unique:types"],
+      'name' => ['required', 'min:3', "max:100", "unique:types,name"],
     ]);
 
     Type::create([
