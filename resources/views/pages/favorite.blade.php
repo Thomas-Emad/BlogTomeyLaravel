@@ -38,7 +38,6 @@
                                 <i class="far fa-bookmark"></i>
                             </a>
                         </div>
-                        <p class="card-text mb-0">{{ $article->title }}</p>
                     </div>
                 </div>
             </div>

@@ -91,7 +91,8 @@
                 @foreach ($article->comments()->orderByDesc('created_at')->limit(10)->get() as $comment)
                     <div class="list d-flex align-items-center border-bottom py-3">
                         <a target="__blank">
-                            <img class="avatar brround d-block cover-image" src="{{ url('files/' . $comment->user->img) }}"
+                            <img class="avatar brround d-block cover-image"
+                                src="{{ url('files/' . $comment->user->img) }}"
                                 onerror="this.src='{{ URL::asset('assets/img/faces/6.jpg') }}'">
                         </a>
                         <div class="wrapper w-100 mr-3">

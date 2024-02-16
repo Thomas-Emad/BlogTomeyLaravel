@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comment;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -77,7 +78,10 @@ class StatisticController extends Controller
     ])->count();
     $articlesDeg = round($articlesMonth / ($articlesTotle != 0 ? $articlesTotle : 1)) * 100;
 
+    // Get Comments
+    $comments =  Comment::whereIn('id_post', $user->articles()->pluck('id'))->get();
+    // return $comments;
 
-    return view('pages.statistic', ['user' => $user, 'allFollowers' => $allFollowers, 'followersDeg' => $followersDeg, 'totelReaction' => $totelReaction, 'reactionDeg' => $reactionDeg, 'followersDeg' => $followersDeg, 'watchedArticles' => $watchedArticles, 'articlesTotle' => $articlesTotle, 'articlesDeg' => $articlesDeg, 'reactionArticlesYear' => $reactionArticlesYear]);
+    return view('pages.statistic', ['user' => $user, 'allFollowers' => $allFollowers, 'followersDeg' => $followersDeg, 'totelReaction' => $totelReaction, 'reactionDeg' => $reactionDeg, 'followersDeg' => $followersDeg, 'watchedArticles' => $watchedArticles, 'articlesTotle' => $articlesTotle, 'articlesDeg' => $articlesDeg, 'reactionArticlesYear' => $reactionArticlesYear, 'comments' => $comments]);
   }
 }

@@ -44,7 +44,11 @@ class UserController extends Controller
   public function show($id = null)
   {
     if ($id == null) {
-      $id = \Auth::user()->id;
+      if (\Auth::check()) {
+        $id = \Auth::user()->id;
+      } else {
+        return redirect("/login");
+      }
     }
     $user = User::findOrFail($id);
     return view("pages.profile", compact(['user']));

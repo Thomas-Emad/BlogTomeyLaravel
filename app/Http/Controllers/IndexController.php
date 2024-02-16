@@ -24,7 +24,7 @@ class IndexController extends Controller
     }
 
     // Take Last 10 Searched And Watched Articles For User And Split it
-    if (\Auth::user()) {
+    if (\Auth::check()) {
       $historyTitle = collect(array_merge(\Auth::user()->articles_watched->pluck('title')->take(5)->toArray(), \Auth::user()->search->pluck('content')->take(5)->toArray()))->shuffle();
       $historyTerms = [];
       foreach ($historyTitle as $title) {
