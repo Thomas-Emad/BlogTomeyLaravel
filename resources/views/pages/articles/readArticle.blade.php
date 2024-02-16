@@ -30,7 +30,7 @@
             </div>
         </div>
         <div><img alt="Responsive image" class="img-fluid"
-                src="{{ isset($article->bgArticle) ? asset('/bgArticles/' . $article->bgArticle) : asset('assets/img/photos/1.jpg') }}"
+                src="{{ isset($article->bgArticle) ? asset('bgArticles/' . $article->bgArticle) : asset('assets/img/photos/1.jpg') }}"
                 style="margin: 0 auto;width: 100%; height:400px">
         </div>
         <div class="content mt-3 mb-3">
@@ -130,7 +130,7 @@
                         style="display: flex; flex-direction: row-reverse; justify-content: space-between;">
                         <div style="display: flex; flex-direction: row-reverse; gap: 10px;">
                             @if (!empty($comment->user->img))
-                                <img src="{{ $comment->user->img }}" alt=""
+                                <img src="{{ asset('files/' . $comment->user->img) }}" alt=""
                                     title="{{ $comment->user->name }}">
                             @else
                                 <div class="avatar bg-info rounded-circle" style="width:50px;height:50px"
@@ -182,7 +182,7 @@
                             style="margin-right: -10px;display: flex; flex-direction: row-reverse; gap: 10px; justify-content: space-between;">
                             <div style="display: flex; flex-direction: row-reverse; gap: 10px;">
                                 @if (!empty($reply->user->img))
-                                    <img src="{{ $reply->user->img }}" alt=""
+                                    <img src="{{ asset('files/' . $reply->user->img) }}" alt=""
                                         title="{{ $reply->user->name }}">
                                 @else
                                     <div class="avatar bg-info rounded-circle" style="width:50px;height:50px"
@@ -299,7 +299,7 @@
                         <form action="{{ url('/Read/' . $article->user->id . '/' . $article->id . '/Comment/Refer') }}" method='POST' class="card col-12 p-3 mb-2" style="margin-right: -10px;display: flex; flex-direction: row-reverse; gap: 10px;">
                             @csrf
                             @if (!empty(Auth::user()->img))
-                                    <img src="{{ Auth::user()->img }}" alt="" title="{{ Auth::user()->name }}">
+                                    <img src="{{ asset('files/' . Auth::user()->img) }}" alt="" title="{{ Auth::user()->name }}">
                                 @else
                                     <div class="avatar bg-info rounded-circle" style="width:50px;height:50px"
                                         title="{{ Auth::user()->name }}">

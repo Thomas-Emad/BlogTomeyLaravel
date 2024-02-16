@@ -145,7 +145,8 @@
                         <div class="list d-flex align-items-center border-bottom py-3">
                             <a target="__blank"
                                 href="{{ route('read', ['user' => $comment->article->id_user, 'id' => $comment->article->id]) }}">
-                                <img class="avatar brround d-block cover-image" src='{{ $comment->article->bgArticle }}'>
+                                <img class="avatar brround d-block cover-image"
+                                    src='{{ asset('bgArticles/' . $comment->article->bgArticle) }}'>
                             </a>
                             <div class="wrapper w-100 mr-3">
                                 <p class="mb-0">
