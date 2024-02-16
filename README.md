@@ -15,4 +15,4 @@ The site is responsive because I use the Valex dashboard and edit it.
 I would like to get your opinion, my friend, on the site in terms of search, because I use the search and reading history to bring you suggested articles and cool stuff. I would like to know your opinion of the site as a whole.
 
 ## Demo App
-You can try it here, my friend:[Demo](http://demo-thomas.infinityfreeapp.com/projects/blogtomeylarave)
+You can try it here, my friend:[Demo](https://demo-thomas.infinityfreeapp.com/projects/blogtomeylaravel)
