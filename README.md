@@ -16,3 +16,15 @@ I would like to get your opinion, my friend, on the site in terms of search, bec
 
 ## Demo App
 You can try it here, my friend:[Demo](https://demo-thomas.infinityfreeapp.com/projects/blogtomeylaravel)
+
+## Preview System
+<p align="center">
+  <img src='https://github.com/Thomas-Emad/BlogTomeyLaravel/assets/54818496/e1530aae-3b45-4148-8d9a-ef271c26dec6'>
+   <img src='https://github.com/Thomas-Emad/BlogTomeyLaravel/assets/54818496/784ea778-fac3-4e83-afb7-bc41b27e5e57'>
+   <img src='https://github.com/Thomas-Emad/BlogTomeyLaravel/assets/54818496/c1f194c8-33f1-4228-9cb3-4c2968fb6090'>
+   <img src='https://github.com/Thomas-Emad/BlogTomeyLaravel/assets/54818496/874be802-f1ff-4bbf-8f1a-417067850e3a'>
+   <img src='https://github.com/Thomas-Emad/BlogTomeyLaravel/assets/54818496/3e691152-025b-4f9e-9b92-e9daa023a114'>
+   <img src='https://github.com/Thomas-Emad/BlogTomeyLaravel/assets/54818496/85a32d1c-3f5d-44b0-b2d6-abf644e82dac'>
+   <img src='https://github.com/Thomas-Emad/BlogTomeyLaravel/assets/54818496/4fd52e23-629d-4703-8aef-4de4e7e26816'>
+     <img src=https://github.com/Thomas-Emad/BlogTomeyLaravel/assets/54818496/0c3cdb80-f756-4f77-a96c-b273412b5f34'>
+</p>
