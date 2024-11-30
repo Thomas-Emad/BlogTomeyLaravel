@@ -56,5 +56,5 @@ You can try it here, my friend:[Demo](https://demo-thomas.infinityfreeapp.com/pr
    <img src='https://github.com/Thomas-Emad/BlogTomeyLaravel/assets/54818496/3e691152-025b-4f9e-9b92-e9daa023a114'>
    <img src='https://github.com/Thomas-Emad/BlogTomeyLaravel/assets/54818496/85a32d1c-3f5d-44b0-b2d6-abf644e82dac'>
    <img src='https://github.com/Thomas-Emad/BlogTomeyLaravel/assets/54818496/4fd52e23-629d-4703-8aef-4de4e7e26816'>
-     <img src=https://github.com/Thomas-Emad/BlogTomeyLaravel/assets/54818496/0c3cdb80-f756-4f77-a96c-b273412b5f34'>
+  <img src='https://github.com/Thomas-Emad/BlogTomeyLaravel/assets/54818496/0c3cdb80-f756-4f77-a96c-b273412b5f34'>
 </p>
