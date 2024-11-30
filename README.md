@@ -1,8 +1,8 @@
 <p align="center"><a href="https://laravel.com" target="_blank">
-<img src='https://github.com/Thomas-Emad/BlogTomeyLaravelLaravel/assets/54818496/042c4942-1bbf-4d8c-839f-763540a8a176' width="400" alt="Laravel Logo">
+<img src='https://github.com/Thomas-Emad/BlogTomeyLaravel/assets/54818496/042c4942-1bbf-4d8c-839f-763540a8a176' width="400" alt="Laravel Logo">
 </a></p>
 
-## About BlogTomeyLaravelLaravel
+## About BlogTomeyLaravel
 
 **BlogTomeyLaravel** is an advanced blogging platform designed to deliver a seamless and feature-rich experience for both writers and readers. With a focus on efficiency, personalization, and robust content management, the platform provides tools to enhance content creation, user interaction, and administrative control.
 
@@ -45,16 +45,16 @@ Built with **Laravel**, BlogTomeyLaravel emphasizes performance, scalability, an
 BlogTomeyLaravel is not just a blogging platform; it’s a comprehensive digital solution redefining the way users consume and create content.
 
 ## Demo App
-You can try it here, my friend:[Demo](https://demo-thomas.infinityfreeapp.com/projects/BlogTomeyLaravellaravel)
+You can try it here, my friend:[Demo](https://demo-thomas.infinityfreeapp.com/projects/BlogTomeyLaravel)
 
 ## Preview System
 <p align="center">
-  <img src='https://github.com/Thomas-Emad/BlogTomeyLaravelLaravel/assets/54818496/e1530aae-3b45-4148-8d9a-ef271c26dec6'>
-   <img src='https://github.com/Thomas-Emad/BlogTomeyLaravelLaravel/assets/54818496/784ea778-fac3-4e83-afb7-bc41b27e5e57'>
-   <img src='https://github.com/Thomas-Emad/BlogTomeyLaravelLaravel/assets/54818496/c1f194c8-33f1-4228-9cb3-4c2968fb6090'>
-   <img src='https://github.com/Thomas-Emad/BlogTomeyLaravelLaravel/assets/54818496/874be802-f1ff-4bbf-8f1a-417067850e3a'>
-   <img src='https://github.com/Thomas-Emad/BlogTomeyLaravelLaravel/assets/54818496/3e691152-025b-4f9e-9b92-e9daa023a114'>
-   <img src='https://github.com/Thomas-Emad/BlogTomeyLaravelLaravel/assets/54818496/85a32d1c-3f5d-44b0-b2d6-abf644e82dac'>
-   <img src='https://github.com/Thomas-Emad/BlogTomeyLaravelLaravel/assets/54818496/4fd52e23-629d-4703-8aef-4de4e7e26816'>
-     <img src=https://github.com/Thomas-Emad/BlogTomeyLaravelLaravel/assets/54818496/0c3cdb80-f756-4f77-a96c-b273412b5f34'>
+  <img src='https://github.com/Thomas-Emad/BlogTomeyLaravel/assets/54818496/e1530aae-3b45-4148-8d9a-ef271c26dec6'>
+   <img src='https://github.com/Thomas-Emad/BlogTomeyLaravel/assets/54818496/784ea778-fac3-4e83-afb7-bc41b27e5e57'>
+   <img src='https://github.com/Thomas-Emad/BlogTomeyLaravel/assets/54818496/c1f194c8-33f1-4228-9cb3-4c2968fb6090'>
+   <img src='https://github.com/Thomas-Emad/BlogTomeyLaravel/assets/54818496/874be802-f1ff-4bbf-8f1a-417067850e3a'>
+   <img src='https://github.com/Thomas-Emad/BlogTomeyLaravel/assets/54818496/3e691152-025b-4f9e-9b92-e9daa023a114'>
+   <img src='https://github.com/Thomas-Emad/BlogTomeyLaravel/assets/54818496/85a32d1c-3f5d-44b0-b2d6-abf644e82dac'>
+   <img src='https://github.com/Thomas-Emad/BlogTomeyLaravel/assets/54818496/4fd52e23-629d-4703-8aef-4de4e7e26816'>
+     <img src=https://github.com/Thomas-Emad/BlogTomeyLaravel/assets/54818496/0c3cdb80-f756-4f77-a96c-b273412b5f34'>
 </p>
